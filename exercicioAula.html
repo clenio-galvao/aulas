@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício durante a aula</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+            <div id="primeiroFilho">oi</div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+    </div>    
+    <script>
+        let pai = document.getElementById("elementoOndeVoceEsta").parentNode;
+        let elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+        pai.style.color = "blue";
+        document.getElementById("primeiroFilhoDoFilho").innerHTML = "texto adicionado";
+        document.getElementById("pai").firstChild;
+        document.getElementById("elementoOndeVoceEsta").previousElementSibling;
+        document.getElementById("elementoOndeVoceEsta").nextSibling;
+        document.getElementById("elementoOndeVoceEsta").nextSibling.nextSibling;
+        document.getElementById("pai").firstElementChild.nextSibling.nextSibling.nextSibling.nextSibling;
+        let incluiDiv1 = document.createElement('div');
+        incluiDiv1.innerHTML = "irmã de elementoOndeVoceEsta";
+        pai.appendChild(incluiDiv1);
+        let incluiDiv2 = document.createElement('div');
+        incluiDiv2.innerHTML = "filha de elementoOndeVoceEsta";
+        elementoOndeVoceEsta.appendChild(incluiDiv2);
+        let incluiDiv3 = document.createElement('div');
+        incluiDiv3.innerHTML = "filha de primeiroFilhoDoFilho";
+        elementoOndeVoceEsta.firstElementChild.appendChild(incluiDiv3);
+        document.querySelector("#primeiroFilhoDoFilho").parentElement.nextSibling.nextSibling;
+        let primeiroFilho = document.getElementById("primeiroFilho")
+        pai.removeChild(primeiroFilho);
+        let segundoEUltimoFilhoDoFilho = document.getElementById("segundoEUltimoFilhoDoFilho")
+        elementoOndeVoceEsta.removeChild(segundoEUltimoFilhoDoFilho);
+    </script>
+</body>
+</html>
